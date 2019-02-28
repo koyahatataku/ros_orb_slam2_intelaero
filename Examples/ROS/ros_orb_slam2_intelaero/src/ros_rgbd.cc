@@ -118,6 +118,7 @@ void ImageGrabber::GrabRGBD(const sensor_msgs::ImageConstPtr& msgRGB,const senso
 /**** 2019/02/26 KOYAHATA ADD START ****/
 cv::Mat Tcw = mpSLAM->TrackRGBD(cv_ptrRGB->image,cv_ptrD->image,cv_ptrRGB->header.stamp.toSec());
 
+try{
 geometry_msgs::PoseStamped pose;
 pose.header.stamp = ros::Time::now();
 pose.header.frame_id = "map";
@@ -136,6 +137,9 @@ new_transform.setRotation(quaternion);
 tf::poseTFToMsg(new_transform, pose.pose);
 pose_pub.publish(pose);
 
+}catch(...){
+	printf("abcd\n");
+}
 /**** 2019/02/26 KOYAHATA ADD END ****/
 
 }
