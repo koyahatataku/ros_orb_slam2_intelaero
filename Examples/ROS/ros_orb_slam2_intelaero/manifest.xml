@@ -1,7 +1,8 @@
 <package>
-  <description brief="ORB_SLAM2">
+<!--  <description brief="ORB_SLAM2"> -->
+<description brief="ros_orb_slam2_intelaero">
 
-     ORB_SLAM2
+ros_orb_slam2_intelaero
 
   </description>
   <author>Raul Mur-Artal</author>

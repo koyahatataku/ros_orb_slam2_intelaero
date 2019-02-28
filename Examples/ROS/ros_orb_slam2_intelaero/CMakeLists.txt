@@ -54,7 +54,7 @@ ${EIGEN3_LIBS}
 ${Pangolin_LIBRARIES}
 ${PROJECT_SOURCE_DIR}/../../../Thirdparty/DBoW2/lib/libDBoW2.so
 ${PROJECT_SOURCE_DIR}/../../../Thirdparty/g2o/lib/libg2o.so
-${PROJECT_SOURCE_DIR}/../../../lib/libORB_SLAM2.so
+${PROJECT_SOURCE_DIR}/../../../lib/libros_orb_slam2_intelaero.so
 -lboost_system
 )
 
@@ -96,7 +96,3 @@ target_link_libraries(RGBD
 ${LIBS}
 )
 
-# Node for subscribe test
-rosbuild_add_executable(TF_SBSC
-src/ros_subsc_test.cc
-)
